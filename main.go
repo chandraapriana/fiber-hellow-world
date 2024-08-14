@@ -2,9 +2,7 @@ package main
 
 import "github.com/gofiber/fiber/v2"
 import (
-        "fmt"
         "log"
-        "net/http"
         "os"
 )
 
