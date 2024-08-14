@@ -8,6 +8,12 @@ func main() {
 	app.Get("/", func(c *fiber.Ctx) error {
 		return c.SendString("Hello, World!")
 	})
-
-	app.Listen(":3000")
+  	port := os.Getenv("PORT")
+        if port == "" {  
+                log.Printf("defaulting to port %s", port)
+		app.Listen(":"+port)
+        }else{	
+		app.Listen(":8080")
+	}
+	
 }
